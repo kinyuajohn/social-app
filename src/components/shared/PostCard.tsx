@@ -27,6 +27,7 @@ const PostCard = ({ post }: PostCardProps) => {
               className="rounded-full w-12 lg:h-12"
             />
           </Link>
+
           <div className="flex flex-col">
             <p className="base-medium lg:body-bold text-light-1">
               {post.creator.name}
@@ -42,6 +43,7 @@ const PostCard = ({ post }: PostCardProps) => {
             </div>
           </div>
         </div>
+
         <Link
           to={`/update-post/${post.$id}`}
           className={`${user.id !== post.creator.$id && "hidden"}`}
@@ -49,6 +51,7 @@ const PostCard = ({ post }: PostCardProps) => {
           <img src="/assets/icons/edit.svg" alt="edit" width={20} height={20} />
         </Link>
       </div>
+
       <Link to={`/posts/${post.$id}`}>
         <div className="small-medium lg:base-medium py-5">
           <p>{post.caption}</p>
