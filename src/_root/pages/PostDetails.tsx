@@ -51,7 +51,7 @@ const PostDetails = () => {
               </Link>
               <div className="flex-center">
                 <Link
-                  to={`/uodate-post/${post?.$id}`}
+                  to={`/update-post/${post?.$id}`}
                   className={`${user.id !== post?.creator.$id && "hidden"}`}
                 >
                   <img
